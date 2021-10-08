@@ -1,3 +1,12 @@
+/*  This handles all keybinds
+    Execution on: Client
+
+	Keybinds:
+	T > Enable/Disable stances
+	
+	- Silence
+*/
+
 isUsingAlternateStance = false;
 [] spawn {
 	waitUntil {!isNull(findDisplay 46)};
