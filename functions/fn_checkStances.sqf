@@ -19,15 +19,6 @@ _alternatestances = [] spawn {
 		_alt = _this select 4;
 		_handled = false;
 		switch (_this select 1) do {
-			case 20: {//T key
-				if (isUsingAlternateStance) then {
-					isUsingAlternateStance = false;
-					titleText ["Alternate Stance: Disabled", "PLAIN DOWN"];
-				} else {
-					isUsingAlternateStance = true;
-					titleText ["Alternate Stance: Enabled", "PLAIN DOWN"];
-				};
-			};
 			case 17: {//W key
 				if (_shift && stance player == "STAND" && isUsingAlternateStance) then {
 					player playMoveNow "AmovPercMtacSlowWrflDf";

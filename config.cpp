@@ -1,6 +1,6 @@
 class cfgPatches
 {
-	class Alternate-Stances
+	class AlternateStances
 	{
 		units[]={};
 		weapons[]={};
@@ -30,7 +30,7 @@ class CfgUserActions
 	{
 		displayName = "Enable/Disable Alternate Mode";
 		tooltip = "";
-		onActivate = "if (isUsingAlternateStance) then {isUsingAlternateStance = false} else {isUsingAlternateStance = true}";		// _this is always true.
+		onActivate = "if (isUsingAlternateStance) then {isUsingAlternateStance = false, titleText ['Alternate Stance: Disabled', 'PLAIN DOWN'], player playMoveNow 'amovpercmstpsraswrfldnon'} else {isUsingAlternateStance = true, titleText ['Alternate Stance: Enabled', 'PLAIN DOWN']}";		// _this is always true.
 		onDeactivate = "";		// _this is always false.
 		onAnalog = "";	// _this is the scalar analog value.
 		analogChangeThreshold = 0.1; // Minimum change required to trigger the onAnalog EH (default: 0.01).
