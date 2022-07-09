@@ -1,14 +1,15 @@
-/*  This handles all keybinds
+/*  
+	This handles all keybinds
     Execution on: Client
 
 	Keybinds:
-	T > Enable/Disable stances
+	Change binds in controls (not cba controls) > Enable/Disable stances
 	
 	- Silence
 */
 
 isUsingAlternateStance = false;
-[] spawn {
+_alternatestances = [] spawn {
 	waitUntil {!isNull(findDisplay 46)};
 	(findDisplay 46) displayAddEventHandler ["KeyDown","_this call keyspressed"];
 	keyspressed = {
@@ -32,7 +33,7 @@ isUsingAlternateStance = false;
 					player playMoveNow "AmovPercMtacSlowWrflDf";
 				} else {
 				if (stance player == "STAND" && isUsingAlternateStance) then {
-					player playMoveNow "AmovPercMwlkSlowWrflDf";
+						player playMoveNow "AmovPercMwlkSlowWrflDf";
 					};
 				};
 			};
